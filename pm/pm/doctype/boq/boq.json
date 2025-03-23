@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-03-22 15:21:05.492174",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "task",
+  "total_cost",
+  "material_tab",
+  "material_items",
+  "material_cost",
+  "machinery_tab",
+  "machinery_items",
+  "machinery_cost",
+  "manpower_tab",
+  "manpower_items",
+  "manpower_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "BOQ-"
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "label": "Task",
+   "options": "Task"
+  },
+  {
+   "fieldname": "material_tab",
+   "fieldtype": "Tab Break",
+   "label": "Material"
+  },
+  {
+   "fieldname": "material_items",
+   "fieldtype": "Table",
+   "label": "Material items",
+   "options": "Material"
+  },
+  {
+   "fieldname": "machinery_tab",
+   "fieldtype": "Tab Break",
+   "label": "Machinery"
+  },
+  {
+   "fieldname": "manpower_tab",
+   "fieldtype": "Tab Break",
+   "label": "Manpower"
+  },
+  {
+   "fieldname": "machinery_items",
+   "fieldtype": "Table",
+   "label": "Machinery Items",
+   "options": "Machinery"
+  },
+  {
+   "fieldname": "manpower_items",
+   "fieldtype": "Table",
+   "label": "Manpower Items",
+   "options": "Manpower"
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Float",
+   "label": "Total cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "material_cost",
+   "fieldtype": "Float",
+   "label": "Material cost"
+  },
+  {
+   "fieldname": "machinery_cost",
+   "fieldtype": "Float",
+   "label": "Machinery cost"
+  },
+  {
+   "fieldname": "manpower_cost",
+   "fieldtype": "Float",
+   "label": "Manpower cost"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-22 22:14:46.568816",
+ "modified_by": "Administrator",
+ "module": "Pm",
+ "name": "BOQ",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

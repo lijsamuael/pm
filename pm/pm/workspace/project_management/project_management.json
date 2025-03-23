@@ -1,0 +1,97 @@
+{
+ "app": "frappe",
+ "charts": [],
+ "content": "[{\"id\":\"mxEyYQ0YSq\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Project Management</span>\",\"col\":12}},{\"id\":\"9Zxg0AMyz9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Contract\",\"col\":3}},{\"id\":\"33lb9avr6v\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project\",\"col\":3}},{\"id\":\"utklaeyp90\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Task\",\"col\":3}},{\"id\":\"2fTD3sNayS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Timesheet\",\"col\":3}},{\"id\":\"AtAauI4RFC\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Z41o2KU2qr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Boq\",\"col\":3}},{\"id\":\"uOvtoXJve3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Operational Plan\",\"col\":3}},{\"id\":\"mp0YvxYEOG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Monthely Plan\",\"col\":3}},{\"id\":\"jTvhynRMuZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Weekly Plan\",\"col\":3}}]",
+ "creation": "2025-03-03 11:59:11.879079",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "solid-warning",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Project Management",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2025-03-23 15:54:14.675734",
+ "modified_by": "Administrator",
+ "module": "Pm",
+ "name": "Project Management",
+ "number_cards": [],
+ "owner": "lijsamuael@gmail.com",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Project",
+   "link_to": "Project",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Monthely Plan",
+   "link_to": "Monthely Plan",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Contract",
+   "link_to": "Contract",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Boq",
+   "link_to": "BOQ",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Task",
+   "link_to": "Task",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Weekly Plan",
+   "link_to": "Weekly Plan",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Operational Plan",
+   "link_to": "Operational Plan",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Timesheet",
+   "link_to": "Timesheet",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Project Management",
+ "type": "Workspace"
+}

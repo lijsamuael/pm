@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-03-23 15:26:56.784266",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project",
+  "monthely_plan",
+  "week",
+  "column_break_yczi",
+  "start_date",
+  "end_date",
+  "tasks_tab",
+  "taks",
+  "section_break_fwoe",
+  "details",
+  "resources_tab",
+  "html_grgs"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming series",
+   "options": "WP-"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "monthely_plan",
+   "fieldtype": "Link",
+   "label": "Monthely plan",
+   "options": "Monthely Plan"
+  },
+  {
+   "fieldname": "week",
+   "fieldtype": "Select",
+   "label": "Week",
+   "options": "Week 1\nWeek 2\nWeek 3\nWeek 4"
+  },
+  {
+   "fieldname": "column_break_yczi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End date"
+  },
+  {
+   "fieldname": "tasks_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tasks"
+  },
+  {
+   "fieldname": "taks",
+   "fieldtype": "Table",
+   "label": "List of Taks",
+   "options": "WP Tasks"
+  },
+  {
+   "fieldname": "section_break_fwoe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "WP Detail"
+  },
+  {
+   "fieldname": "resources_tab",
+   "fieldtype": "Tab Break",
+   "label": "Resources"
+  },
+  {
+   "fieldname": "html_grgs",
+   "fieldtype": "HTML"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-23 15:46:12.325903",
+ "modified_by": "Administrator",
+ "module": "Pm",
+ "name": "Weekly Plan",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

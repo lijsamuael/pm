@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-03-22 23:48:18.232247",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project",
+  "name1",
+  "column_break_ytya",
+  "start_date",
+  "end_date",
+  "project_duration",
+  "supervision_tab",
+  "projecat_manager_name",
+  "phone",
+  "tasks_tab",
+  "tasks",
+  "section_break_swpd",
+  "detial1",
+  "detail2",
+  "critical_path_tab",
+  "html_lkdz"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming series",
+   "options": "OP-"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Date",
+   "label": "Name"
+  },
+  {
+   "fetch_from": "project.expected_start_date",
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "label": "Start date"
+  },
+  {
+   "fetch_from": "project.expected_end_date",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End date"
+  },
+  {
+   "fieldname": "project_duration",
+   "fieldtype": "Int",
+   "label": "Project duration"
+  },
+  {
+   "fieldname": "supervision_tab",
+   "fieldtype": "Tab Break",
+   "label": "Supervision"
+  },
+  {
+   "fieldname": "projecat_manager_name",
+   "fieldtype": "Data",
+   "label": "Projecat manager name"
+  },
+  {
+   "default": "+251-",
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "tasks_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tasks"
+  },
+  {
+   "fieldname": "column_break_ytya",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_swpd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tasks",
+   "fieldtype": "Table",
+   "label": "List of tasks",
+   "options": "OP Tasks"
+  },
+  {
+   "fieldname": "detial1",
+   "fieldtype": "Table",
+   "label": "Detial plan 1",
+   "options": "OP Detail 1"
+  },
+  {
+   "fieldname": "detail2",
+   "fieldtype": "Table",
+   "label": "Detail plan 2",
+   "options": "OP Detail 2"
+  },
+  {
+   "fieldname": "critical_path_tab",
+   "fieldtype": "Tab Break",
+   "label": "Critical path"
+  },
+  {
+   "fieldname": "html_lkdz",
+   "fieldtype": "HTML",
+   "options": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Critical Path Visualization</title>\n    <!-- Tailwind CSS CDN -->\n    <script src=\"https://cdn.tailwindcss.com\"></script>\n    <style>\n\t\t.task-container {\n\t\t\tdisplay: flex;\n\t\t\talign-items: center; \n\t\t\tgap: 40px;\n\t\t\toverflow-x: auto;\n\t\t\tpadding: 20px;\n\t\t\theight: 400px;\n\t\t\twhite-space: nowrap;\n\t\t}\n\n        .task {\n            min-width: 220px;\n            height: 80px;\n            color: white;\n            text-align: center;\n            line-height: 80px;\n            border-radius: 10px;\n            position: relative;\n            cursor: pointer;\n            transition: transform 0.3s ease;\n            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n        }\n        .task:hover {\n            transform: scale(1.05);\n        }\n\t\t.task-info {\n\t\t\tdisplay: none;\n\t\t\tposition: absolute;\n\t\t\tbackground-color: rgba(0, 0, 0, 0.85);\n\t\t\tcolor: white;\n\t\t\tpadding: 4px 8px; /* Reduced padding */\n\t\t\tborder-radius: 4px;\n\t\t\tfont-size: 14px; /* Smaller font size */\n\t\t\tline-height: 2; /* Compact line height */\n\t\t\ttext-align: left;\n\t\t\twhite-space: nowrap;\n\t\t\tbottom: 100%;\n\t\t\tleft: 50%;\n\t\t\ttransform: translateX(-50%);\n\t\t\tz-index: 10;\n\t\t\topacity: 0;\n\t\t\ttransition: opacity 0.2s ease-in-out;\n\t\t}\n\n        .task:hover .task-info {\n            display: block;\n            opacity: 1;\n        }\n        /* Tooltip arrow */\n        .task-info::after {\n            content: \"\";\n            position: absolute;\n            top: 100%;\n            left: 50%;\n            transform: translateX(-50%);\n            border-width: 5px;\n            border-style: solid;\n            border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent;\n        }\n    </style>\n</head>\n<body class=\"bg-gray-100 flex justify-center p-10\">\n\n    <div class=\"w-full h-screen max-w-6xl\">\n        <div id=\"task-container\" class=\"task-container border  rounded bg-white shadow-md\"></div>\n    </div>\n\n    <script>\n        function fetchTasks() {\n            frappe.call({\n                method: \"pm.pm.doctype.operational_plan.operational_plan.get_tasks_by_project\",\n                args: { project: \"PROJ-0001\" },\n                callback: function(response) {\n                    if (!response || !response.message) {\n                        console.error(\"Invalid response:\", response);\n                        return;\n                    }\n\n                    const tasks = response.message;\n                    const container = document.getElementById('task-container');\n                    container.innerHTML = '';\n\n                    tasks.forEach(task => {\n                        const taskElement = document.createElement('div');\n                        taskElement.classList.add('task');\n                        taskElement.style.backgroundColor = task.color || '#3B82F6';\n                        taskElement.innerHTML = `\n                            ${task.subject}\n                            <div class=\"task-info\">\n                                \ud83d\udcc5 <b>Start:</b> ${task.exp_start_date}</br>\n                                \u23f3 <b>End:</b> ${task.exp_end_date}\n                            </div>\n                        `;\n                        container.appendChild(taskElement);\n                    });\n                },\n                error: function(error) {\n                    console.error(\"Error fetching tasks:\", error);\n                }\n            });\n        }\n\n        fetchTasks(); // Fetch tasks on page load\n    </script>\n\n</body>\n</html>\n"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-23 22:21:09.852635",
+ "modified_by": "Administrator",
+ "module": "Pm",
+ "name": "Operational Plan",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

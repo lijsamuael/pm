@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Machinery-{####}",
+ "creation": "2025-03-11 14:45:54.765450",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "rate",
+  "hr",
+  "fuel_uom",
+  "total_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Asset"
+  },
+  {
+   "fieldname": "fuel_uom",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Fuel usage"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Rate / hour"
+  },
+  {
+   "fieldname": "hr",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Hr"
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total cost"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-22 23:33:04.818720",
+ "modified_by": "Administrator",
+ "module": "Pm",
+ "name": "Machinery",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

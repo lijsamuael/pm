@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:MP-Detail-{#####}",
+ "creation": "2025-03-23 15:18:03.269790",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task",
+  "uom",
+  "start_date",
+  "end_date",
+  "duration",
+  "qty",
+  "column_break_ebwc",
+  "week_1",
+  "week_2",
+  "week_3",
+  "week_4"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task",
+   "options": "Task"
+  },
+  {
+   "columns": 1,
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fetch_from": "task.exp_start_date",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start date"
+  },
+  {
+   "fetch_from": "task.exp_start_date",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End date"
+  },
+  {
+   "columns": 1,
+   "fieldname": "duration",
+   "fieldtype": "Float",
+   "label": "Duration"
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "fieldname": "column_break_ebwc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "week_1",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Week 1",
+   "options": "Task"
+  },
+  {
+   "columns": 1,
+   "fieldname": "week_2",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Week 2"
+  },
+  {
+   "columns": 1,
+   "fieldname": "week_3",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Week 3"
+  },
+  {
+   "columns": 1,
+   "fieldname": "week_4",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Week 4"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-23 15:18:03.269790",
+ "modified_by": "Administrator",
+ "module": "Pm",
+ "name": "MP Detail",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

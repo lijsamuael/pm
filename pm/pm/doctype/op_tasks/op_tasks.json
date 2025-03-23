@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:OP-Tasks-{#####}",
+ "creation": "2025-03-23 00:08:18.389225",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task",
+  "uom",
+  "start_date",
+  "end_date",
+  "duration",
+  "qty",
+  "predecessor_task",
+  "dependancy_type",
+  "lag_days",
+  "lead_days"
+ ],
+ "fields": [
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task",
+   "options": "Task"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "columns": 1,
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Duration"
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "fieldname": "predecessor_task",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Predecessor task",
+   "options": "Task"
+  },
+  {
+   "fieldname": "dependancy_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Dependancy type",
+   "options": "Finish to Start\nStart to Start\nStart to Finish\nFinish to Finish"
+  },
+  {
+   "fieldname": "lag_days",
+   "fieldtype": "Int",
+   "label": "Lag days"
+  },
+  {
+   "fieldname": "lead_days",
+   "fieldtype": "Int",
+   "label": "Lead days"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "task.exp_start_date",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start date"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "task.exp_end_date",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-23 22:18:40.568928",
+ "modified_by": "Administrator",
+ "module": "Pm",
+ "name": "OP Tasks",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-03-23 15:01:50.500481",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project",
+  "operational_plan",
+  "start_date",
+  "end_date",
+  "month",
+  "tasks_tab",
+  "tasks",
+  "detail_plans_section",
+  "details",
+  "resources_tab",
+  "html_feyl"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming series"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "operational_plan",
+   "fieldtype": "Link",
+   "label": "Operational Plan",
+   "options": "Operational Plan"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End date"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "label": "Month",
+   "options": "Month 1\nMonth 2\nMonth 3\nMonth 4\nMonth 5\nMonth 6\nMonth 7\nMonth 8\nMonth 9\nMonth 10\nMonth 11\nMonth 12"
+  },
+  {
+   "fieldname": "tasks_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tasks"
+  },
+  {
+   "fieldname": "detail_plans_section",
+   "fieldtype": "Section Break",
+   "label": "Detail plans"
+  },
+  {
+   "fieldname": "resources_tab",
+   "fieldtype": "Tab Break",
+   "label": "Resources"
+  },
+  {
+   "fieldname": "html_feyl",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "tasks",
+   "fieldtype": "Table",
+   "label": "List of tasks",
+   "options": "MP Tasks"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "MP Detail"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-23 15:50:05.128852",
+ "modified_by": "Administrator",
+ "module": "Pm",
+ "name": "Monthely Plan",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
