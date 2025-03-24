@@ -11,7 +11,6 @@
   "operational_plan",
   "start_date",
   "end_date",
-  "month",
   "tasks_tab",
   "tasks",
   "detail_plans_section",
@@ -23,9 +22,11 @@
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "label": "Naming series"
+   "label": "Naming series",
+   "options": "MP-"
   },
   {
+   "fetch_from": "operational_plan.project",
    "fieldname": "project",
    "fieldtype": "Link",
    "label": "Project",
@@ -46,12 +47,6 @@
    "fieldname": "end_date",
    "fieldtype": "Date",
    "label": "End date"
-  },
-  {
-   "fieldname": "month",
-   "fieldtype": "Select",
-   "label": "Month",
-   "options": "Month 1\nMonth 2\nMonth 3\nMonth 4\nMonth 5\nMonth 6\nMonth 7\nMonth 8\nMonth 9\nMonth 10\nMonth 11\nMonth 12"
   },
   {
    "fieldname": "tasks_tab",
@@ -88,7 +83,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-23 15:50:05.128852",
+ "modified": "2025-03-24 11:34:28.633686",
  "modified_by": "Administrator",
  "module": "Pm",
  "name": "Monthely Plan",

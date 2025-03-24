@@ -8,13 +8,13 @@
  "field_order": [
   "naming_series",
   "project",
-  "monthely_plan",
+  "monthly_plan",
   "week",
   "column_break_yczi",
   "start_date",
   "end_date",
   "tasks_tab",
-  "taks",
+  "tasks",
   "section_break_fwoe",
   "details",
   "resources_tab",
@@ -32,12 +32,6 @@
    "fieldtype": "Link",
    "label": "Project",
    "options": "Project"
-  },
-  {
-   "fieldname": "monthely_plan",
-   "fieldtype": "Link",
-   "label": "Monthely plan",
-   "options": "Monthely Plan"
   },
   {
    "fieldname": "week",
@@ -65,12 +59,6 @@
    "label": "Tasks"
   },
   {
-   "fieldname": "taks",
-   "fieldtype": "Table",
-   "label": "List of Taks",
-   "options": "WP Tasks"
-  },
-  {
    "fieldname": "section_break_fwoe",
    "fieldtype": "Section Break"
   },
@@ -88,12 +76,24 @@
   {
    "fieldname": "html_grgs",
    "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "monthly_plan",
+   "fieldtype": "Link",
+   "label": "Monthly plan",
+   "options": "Monthely Plan"
+  },
+  {
+   "fieldname": "tasks",
+   "fieldtype": "Table",
+   "label": "List of Taks",
+   "options": "WP Tasks"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-23 15:46:12.325903",
+ "modified": "2025-03-24 13:30:43.338409",
  "modified_by": "Administrator",
  "module": "Pm",
  "name": "Weekly Plan",
